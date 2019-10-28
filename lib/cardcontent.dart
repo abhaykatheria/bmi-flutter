@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'const.dart';
 
-const labelTextStyle=TextStyle(
-  fontWeight: FontWeight.bold,
-  fontSize: 20.0,
-  color: Colors.grey,
-);
-
-const numberTextStyle = TextStyle(
-    fontSize: 50.0,
-    fontWeight:  FontWeight.w900);
 
 class CardContent extends StatelessWidget {
   CardContent({this.icon,this.contentText});
@@ -27,7 +19,7 @@ class CardContent extends StatelessWidget {
         Center(
           child: Text(
             contentText,
-            style: labelTextStyle,
+            style: kLabelTextStyle,
           ),
         ),
       ],
