@@ -17,6 +17,10 @@ enum Gender {
   female,
 }
 
+enum value {
+  weight,
+  age,
+}
 
 class _InputPageState extends State<InputPage> {
   int height = 150;
@@ -148,12 +152,20 @@ class _InputPageState extends State<InputPage> {
                               children: <Widget>[
                                 FloatingActionButton(
                                   child: Icon(FontAwesomeIcons.minus,color: Colors.white70,),
-                                  onPressed: (){},
+                                  onPressed: () {
+                                    setState(() {
+                                      this.age -= 1;
+                                    });
+                                  },
                                 ),
                                 SizedBox(width:20.0),
                                 FloatingActionButton(
                                   child: Icon(FontAwesomeIcons.plus,color: Colors.white70,),
-                                  onPressed: (){},
+                                  onPressed: () {
+                                    setState(() {
+                                      this.age += 1;
+                                    });
+                                  },
                                 ),
                               ],
                             ),
@@ -185,12 +197,20 @@ class _InputPageState extends State<InputPage> {
                             children: <Widget>[
                               FloatingActionButton(
                                 child: Icon(FontAwesomeIcons.minus,color: Colors.white70,),
-                                onPressed: (){},
+                                onPressed: () {
+                                  setState(() {
+                                    this.weight -= 1;
+                                  });
+                                },
                               ),
                               SizedBox(width:20.0),
                               FloatingActionButton(
                                 child: Icon(FontAwesomeIcons.plus,color: Colors.white70,),
-                                onPressed: (){},
+                                onPressed: () {
+                                  setState(() {
+                                    this.weight += 1;
+                                  });
+                                },
                               ),
                             ],
                           ),
