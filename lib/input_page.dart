@@ -3,7 +3,7 @@ import 'reusablecard.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'cardcontent.dart';
 
-
+import'result.dart';
 import 'const.dart';
 //1=male,2=female
 
@@ -151,6 +151,7 @@ class _InputPageState extends State<InputPage> {
 
                               children: <Widget>[
                                 FloatingActionButton(
+                                  heroTag: 'btn4',
                                   child: Icon(FontAwesomeIcons.minus,color: Colors.white70,),
                                   onPressed: () {
                                     setState(() {
@@ -160,6 +161,7 @@ class _InputPageState extends State<InputPage> {
                                 ),
                                 SizedBox(width:20.0),
                                 FloatingActionButton(
+                                  heroTag: 'btn3',
                                   child: Icon(FontAwesomeIcons.plus,color: Colors.white70,),
                                   onPressed: () {
                                     setState(() {
@@ -196,6 +198,7 @@ class _InputPageState extends State<InputPage> {
 
                             children: <Widget>[
                               FloatingActionButton(
+                                heroTag: 'btn2',
                                 child: Icon(FontAwesomeIcons.minus,color: Colors.white70,),
                                 onPressed: () {
                                   setState(() {
@@ -205,6 +208,7 @@ class _InputPageState extends State<InputPage> {
                               ),
                               SizedBox(width:20.0),
                               FloatingActionButton(
+                                heroTag: 'btn1',
                                 child: Icon(FontAwesomeIcons.plus,color: Colors.white70,),
                                 onPressed: () {
                                   setState(() {
@@ -222,18 +226,24 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
-            Container(
-              width: double.infinity,
-              color: Colors.pink,
-              height: 70.0,
-              child: Center(
-                  child: Text(
-                'Calculate your BMI',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
+            FlatButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Result()));
+              },
+              child: Container(
+                width: double.infinity,
+                color: Colors.pink,
+                height: 70.0,
+                child: Center(
+                    child: Text(
+                      'Calculate your BMI',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )),
+              ),
             )
           ],
         ),
