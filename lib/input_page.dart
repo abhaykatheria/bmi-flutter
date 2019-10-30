@@ -229,7 +229,8 @@ class _InputPageState extends State<InputPage> {
             FlatButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Result()));
+                    context, MaterialPageRoute(builder: (context) =>
+                    Result(height: height, weight: weight)));
               },
               child: Container(
                 width: double.infinity,
